@@ -7,7 +7,7 @@ This README provides instructions for setting up and running the project, as wel
 ### Clone the Repository
 
 ```bash
-git clone https://github.com/saran13raj/streamify
+git clone https://github.com/saran13raj/streamify.git
 cd streamify
 ```
 
@@ -58,6 +58,8 @@ Uncomment `coverageReporters` in `jest.config.ts` file to generate coverage repo
 
 ## Additional Information
 
+Click on revenue distribution pie chart segment to filter recent streams by that revenue source.
+
 Could have mocked API calls for metrics and charts similar to recent streams API call. Then planned to not do it at this time and hardcoded it to the effector store.
 
 It's best to sort Tailwind classes using [Tailwind prettier](https://tailwindcss.com/blog/automatic-class-sorting-with-prettier). So it's easy find the exact class while debugging if you understand by what order Tailwind orders in CSS.
@@ -66,4 +68,4 @@ It's best to sort Tailwind classes using [Tailwind prettier](https://tailwindcss
 
 Demo - https://streamify-9g1.pages.dev
 
--- built by saran13raj.com
+-- built by [saran13raj.com](https://saran13raj.com/)

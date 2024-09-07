@@ -67,7 +67,7 @@ export const topStreamsData: TopStreams[] = [
 ];
 
 export const revenueDistributionData: RevenueDistribution[] = [
-	{ type: 'Subscriptions', amount: 275, fill: 'hsl(var(--chart-1))' },
+	{ type: 'Subscription', amount: 275, fill: 'hsl(var(--chart-1))' },
 	{ type: 'Advertisement', amount: 200, fill: 'hsl(var(--chart-2))' },
 	{ type: 'Referral', amount: 187, fill: 'hsl(var(--chart-3))' }
 ];

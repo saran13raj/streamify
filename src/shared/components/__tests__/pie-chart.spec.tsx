@@ -27,21 +27,21 @@ describe('PieChartCustom', () => {
 		nameKey: 'name'
 	};
 
-	it('renders the component with correct title and description', () => {
+	it('should render the component with correct title and description', () => {
 		render(<PieChartCustom {...mockProps} />);
 
 		expect(screen.getByText('Test revenue')).toBeInTheDocument();
 		expect(screen.getByText('Past 15 days')).toBeInTheDocument();
 	});
 
-	it('renders the footer with correct information', () => {
+	it('should render the footer with correct information', () => {
 		render(<PieChartCustom {...mockProps} />);
 
 		expect(screen.getByText('Footer title')).toBeInTheDocument();
 		expect(screen.getByText('revenue distribution')).toBeInTheDocument();
 	});
 
-	it('renders the chart elements', () => {
+	it('should render the chart elements', () => {
 		render(<PieChartCustom {...mockProps} />);
 
 		expect(screen.getByTestId('mock-pie-chart')).toBeInTheDocument();

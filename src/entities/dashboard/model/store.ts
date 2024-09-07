@@ -21,6 +21,7 @@ export const dashboardGate = createGate();
 const domain = createDomain('entities/dashboard');
 
 export const fetchRecentStreamsRequested = domain.event();
+export const revenueSourceSelected = domain.event<string[]>();
 
 export const fetchRecentStreamsFx = domain.effect(fetchRecentStreamsAPI);
 
@@ -29,8 +30,11 @@ export const $userGrowthStats = domain.store<UserGrowth[]>(userGrowthData);
 export const $topStreamsStats = domain.store<TopStreams[]>(topStreamsData);
 export const $revenueStats = domain.store<RevenueDistribution[]>(revenueDistributionData);
 export const $recentStreams = domain.store<RecentStream[]>([]);
+export const $revenueSourceSelection = domain.store<string[]>(['']);
 
 $recentStreams.on(fetchRecentStreamsFx.doneData, (_, payload) => payload);
+
+$revenueSourceSelection.on(revenueSourceSelected, (_, payload) => payload);
 
 sample({
 	clock: dashboardGate.open,

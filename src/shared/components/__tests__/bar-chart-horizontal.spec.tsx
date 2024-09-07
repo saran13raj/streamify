@@ -33,21 +33,21 @@ describe('BarChartHorizontal', () => {
 		dataKey: 'song'
 	};
 
-	it('renders the component with correct title and description', async () => {
+	it('should render the component with correct title and description', async () => {
 		render(<BarChartHorizontal {...mockProps} />);
 
 		expect(screen.getByText('Test Songs')).toBeInTheDocument();
 		expect(screen.getByText('Past 10 days')).toBeInTheDocument();
 	});
 
-	it('renders the footer with correct information', () => {
+	it('should render the footer with correct information', () => {
 		render(<BarChartHorizontal {...mockProps} />);
 
 		expect(screen.getByText('Footer title')).toBeInTheDocument();
 		expect(screen.getByText('Top 5 songs')).toBeInTheDocument();
 	});
 
-	it('renders the chart elements', () => {
+	it('should render the chart elements', () => {
 		render(<BarChartHorizontal {...mockProps} />);
 
 		expect(screen.getByTestId('mock-bar-chart')).toBeInTheDocument();

@@ -1,3 +1,5 @@
+import { dashboardEntityModel } from 'entities/dashboard';
+import { topRevenueSources } from 'entities/dashboard/data';
 import { Pie, PieChart } from 'recharts';
 
 import {
@@ -35,10 +37,23 @@ export const PieChartCustom: React.FC<CustomChart> = ({
 			<CardContent className='flex-1 pb-0'>
 				<ChartContainer
 					config={chartConfig}
-					className='mx-auto aspect-square max-h-[250px] pb-0 [&_.recharts-pie-label-text]:fill-foreground'>
+					className='mx-auto aspect-square max-h-[260px] pb-0 [&_.recharts-pie-label-text]:fill-foreground'>
 					<PieChart>
 						<ChartTooltip content={<ChartTooltipContent hideLabel />} />
-						<Pie data={data} dataKey={dataKey} label nameKey={nameKey} />
+						<Pie
+							data={data}
+							dataKey={dataKey}
+							label
+							nameKey={nameKey}
+							onClick={(meta) => {
+								const selectedValue =
+									topRevenueSources.find(
+										(source) =>
+											source.label.toLowerCase() === meta.type.toLowerCase()
+									)?.value ?? '';
+								dashboardEntityModel.revenueSourceSelected([selectedValue]);
+							}}
+						/>
 					</PieChart>
 				</ChartContainer>
 			</CardContent>

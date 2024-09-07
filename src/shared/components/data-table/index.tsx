@@ -29,9 +29,14 @@ import { DataTableToolbar } from './data-table-toolbar';
 type DataTableProps<TData, TValue> = {
 	columns: ColumnDef<TData, TValue>[];
 	data: TData[];
+	facetSelected?: string[];
 };
 
-export function DataTable<TData, TValue>({ columns, data }: DataTableProps<TData, TValue>) {
+export function DataTable<TData, TValue>({
+	columns,
+	data,
+	facetSelected
+}: DataTableProps<TData, TValue>) {
 	const [rowSelection, setRowSelection] = React.useState({});
 	const [columnVisibility, setColumnVisibility] = React.useState<VisibilityState>({});
 	const [columnFilters, setColumnFilters] = React.useState<ColumnFiltersState>([]);
@@ -61,7 +66,7 @@ export function DataTable<TData, TValue>({ columns, data }: DataTableProps<TData
 
 	return (
 		<div className='space-y-4'>
-			<DataTableToolbar table={table} />
+			<DataTableToolbar table={table} facetSelected={facetSelected} />
 			<div className='rounded-md border'>
 				<Table>
 					<TableHeader>

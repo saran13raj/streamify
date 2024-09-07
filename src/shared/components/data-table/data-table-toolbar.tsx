@@ -10,9 +10,10 @@ import { topRevenueSources } from 'entities/dashboard/data';
 
 type DataTableToolbarProps<TData> = {
 	table: Table<TData>;
+	facetSelected?: string[];
 };
 
-export function DataTableToolbar<TData>({ table }: DataTableToolbarProps<TData>) {
+export function DataTableToolbar<TData>({ table, facetSelected }: DataTableToolbarProps<TData>) {
 	const isFiltered = table.getState().columnFilters.length > 0;
 
 	return (
@@ -31,6 +32,7 @@ export function DataTableToolbar<TData>({ table }: DataTableToolbarProps<TData>)
 						column={table.getColumn('topRevenueSource')}
 						title='Top Revenue Source'
 						options={topRevenueSources}
+						selected={facetSelected}
 					/>
 				)}
 				{isFiltered && (

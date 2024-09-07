@@ -20,7 +20,7 @@ jest.mock('./pages/dashboard', () => ({
 }));
 
 describe('App Component', () => {
-	it('renders the ThemeProvider, ThemeToggle, and Dashboard', () => {
+	it('should render the ThemeProvider, ThemeToggle, and Dashboard', () => {
 		render(<App />);
 
 		expect(screen.getByTestId('theme-provider')).toBeInTheDocument();

@@ -19,7 +19,8 @@ jest.mock('shared/components/data-table', () => ({
 jest.mock('entities/dashboard', () => ({
 	dashboardEntityModel: {
 		$recentStreams: 'mocked-recent-streams',
-		$dashboardMetrics: 'mocked-dashboard-metrics'
+		$dashboardMetrics: 'mocked-dashboard-metrics',
+		$revenueSourceSelection: ['']
 	},
 	dataColumns: ['col1', 'col2', 'col3', 'col4', 'col5']
 }));
@@ -39,33 +40,41 @@ describe('RecentStreams', () => {
 	beforeEach(() => {
 		jest.clearAllMocks();
 
-		(useUnit as jest.Mock).mockReturnValue(mockRecentStreams);
+		(useUnit as jest.Mock).mockImplementation((store) => {
+			if (store === dashboardEntityModel.$recentStreams) {
+				return mockRecentStreams;
+			}
+			if (store === dashboardEntityModel.$revenueSourceSelection) {
+				return [''];
+			}
+			return null;
+		});
 	});
 
-	it('renders the component with correct title', () => {
+	it('should render the component with correct title', () => {
 		render(<RecentStreams />);
 		expect(screen.getByText('Recent Streams')).toBeInTheDocument();
 	});
 
-	it('renders the DataTable component', () => {
+	it('should render the DataTable component', () => {
 		render(<RecentStreams />);
 		expect(screen.getByTestId('mock-data-table')).toBeInTheDocument();
 	});
 
-	it('passes correct props to DataTable', () => {
+	it('should pass correct props to DataTable', () => {
 		render(<RecentStreams />);
 		expect(DataTable).toHaveBeenCalledWith(
-			{ data: mockRecentStreams, columns: dataColumns }, // needed props
+			{ data: mockRecentStreams, columns: dataColumns, facetSelected: [''] }, // needed props
 			{} // additional props
 		);
 	});
 
-	it('uses the correct store from dashboardEntityModel', () => {
+	it('should use the correct store from dashboardEntityModel', () => {
 		render(<RecentStreams />);
 		expect(useUnit).toHaveBeenCalledWith(dashboardEntityModel.$recentStreams);
 	});
 
-	it('test fail case for dashboardEntityModel', () => {
+	it('should fail for dashboardMetrics', () => {
 		render(<RecentStreams />);
 		expect(useUnit).not.toHaveBeenCalledWith(dashboardEntityModel.$dashboardMetrics);
 	});

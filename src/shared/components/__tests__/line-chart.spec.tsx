@@ -31,21 +31,21 @@ describe('LineChartCustom', () => {
 		dataKey: 'month'
 	};
 
-	it('renders the component with correct title and description', () => {
+	it('should render the component with correct title and description', () => {
 		render(<LineChartCustom {...mockProps} />);
 
 		expect(screen.getByText('Test user growth')).toBeInTheDocument();
 		expect(screen.getByText('Jan - Dec 2013')).toBeInTheDocument();
 	});
 
-	it('renders the footer with correct information', () => {
+	it('should render the footer with correct information', () => {
 		render(<LineChartCustom {...mockProps} />);
 
 		expect(screen.getByText('Up by 13%')).toBeInTheDocument();
 		expect(screen.getByText('past 12 months')).toBeInTheDocument();
 	});
 
-	it('renders the chart elements', () => {
+	it('should render the chart elements', () => {
 		render(<LineChartCustom {...mockProps} />);
 
 		expect(screen.getByTestId('mock-line-chart')).toBeInTheDocument();
