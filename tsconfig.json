@@ -27,7 +27,10 @@
 		/* Linting */
 		"strict": true,
 
-		"types": ["vite/client"] // needed for env
+		"types": ["jest", "vite/client"],
+
+		"esModuleInterop": true
 	},
+	"include": ["./jest.setup.ts"],
 	"exclude": ["node_modules", "dist"]
 }
