@@ -7,7 +7,6 @@ import {
 	DropdownMenuContent,
 	DropdownMenuItem,
 	DropdownMenuSeparator,
-	DropdownMenuShortcut,
 	DropdownMenuTrigger
 } from 'shared/components/shadcn/ui/dropdown-menu';
 
@@ -30,10 +29,7 @@ export function DataTableRowActions<TData>({ row }: DataTableRowActionsProps<TDa
 				<DropdownMenuItem>Go to revenue</DropdownMenuItem>
 				<DropdownMenuSeparator />
 
-				<DropdownMenuItem>
-					Edit
-					<DropdownMenuShortcut>⌘⌫</DropdownMenuShortcut>
-				</DropdownMenuItem>
+				<DropdownMenuItem>Edit</DropdownMenuItem>
 			</DropdownMenuContent>
 		</DropdownMenu>
 	);
