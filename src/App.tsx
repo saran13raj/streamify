@@ -1,7 +1,9 @@
 import { ThemeProvider } from 'entities/theme/theme-provider';
-import './App.css';
 import { ThemeToggle } from 'entities/theme/toggle';
+
 import { Dashboard } from 'pages/dashboard';
+
+import './App.css';
 
 function App() {
 	return (

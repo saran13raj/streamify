@@ -1,11 +1,13 @@
 import { ColumnDef } from '@tanstack/react-table';
 
+import { topRevenueSources } from 'entities/dashboard/data';
+
 import { Checkbox } from 'shared/components/shadcn/ui/checkbox';
 import { DataTableColumnHeader } from 'shared/components/data-table/data-table-column-header';
 import { DataTableRowActions } from 'shared/components/data-table/data-table-row-actions';
 
-import { topRevenueSources } from 'entities/dashboard/data';
 import { RecentStream } from './types';
+import { formatDate } from 'date-fns';
 
 export const dataColumns: ColumnDef<RecentStream>[] = [
 	{
@@ -85,7 +87,7 @@ export const dataColumns: ColumnDef<RecentStream>[] = [
 			return (
 				<div className='flex space-x-2'>
 					<span className='max-w-[500px] truncate font-medium'>
-						{row.getValue('dateStreamed')}
+						{formatDate(row.getValue('dateStreamed'), 'yyyy-MM-dd HH:mm')}
 					</span>
 				</div>
 			);

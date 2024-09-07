@@ -11,10 +11,10 @@ import React from 'react';
 import { dashboardEntityModel } from 'entities/dashboard';
 
 import { BarChartHorizontal } from 'shared/components/bar-chart';
-
 import { LineChartCustom } from 'shared/components/line-chart';
 import { MetricsCard } from 'shared/components/metrics-card';
 import { PieChartCustom } from 'shared/components/pie-chart';
+
 import { RecentStreams } from 'widgets/dashboard/recent-streams';
 
 export const Dashboard: React.FC = () => {

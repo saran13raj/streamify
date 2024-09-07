@@ -17,12 +17,12 @@ import {
 import { CustomChart } from 'shared/types';
 
 const chartConfig = {
-	desktop: {
-		label: 'Desktop',
+	total: {
+		label: 'Total',
 		color: 'hsl(var(--chart-1))'
 	},
-	mobile: {
-		label: 'Mobile',
+	active: {
+		label: 'Active',
 		color: 'hsl(var(--chart-2))'
 	}
 } satisfies ChartConfig;
@@ -59,16 +59,16 @@ export const LineChartCustom: React.FC<CustomChart> = ({
 						/>
 						<ChartTooltip cursor={false} content={<ChartTooltipContent />} />
 						<Line
-							dataKey='desktop'
+							dataKey='total'
 							type='monotone'
-							stroke='var(--color-desktop)'
+							stroke='var(--color-total)'
 							strokeWidth={2}
 							dot={false}
 						/>
 						<Line
-							dataKey='mobile'
+							dataKey='active'
 							type='monotone'
-							stroke='var(--color-mobile)'
+							stroke='var(--color-active)'
 							strokeWidth={2}
 							dot={false}
 						/>

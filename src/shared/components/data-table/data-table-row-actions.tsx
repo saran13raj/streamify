@@ -25,14 +25,13 @@ export function DataTableRowActions<TData>({ row }: DataTableRowActionsProps<TDa
 				</Button>
 			</DropdownMenuTrigger>
 			<DropdownMenuContent align='end' className='w-[160px]'>
-				<DropdownMenuItem>Edit</DropdownMenuItem>
-				<DropdownMenuItem>Make a copy</DropdownMenuItem>
-				<DropdownMenuItem>Favorite</DropdownMenuItem>
+				<DropdownMenuItem>Go to artist</DropdownMenuItem>
+				<DropdownMenuItem>Go to song</DropdownMenuItem>
+				<DropdownMenuItem>Go to revenue</DropdownMenuItem>
 				<DropdownMenuSeparator />
 
-				<DropdownMenuSeparator />
 				<DropdownMenuItem>
-					Delete
+					Edit
 					<DropdownMenuShortcut>⌘⌫</DropdownMenuShortcut>
 				</DropdownMenuItem>
 			</DropdownMenuContent>

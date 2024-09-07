@@ -11,9 +11,9 @@ export type DashboardMetrics = {
 	topArtist: Metrics;
 };
 
-export type UserGrowth = { month: string; desktop: number; mobile: number };
+export type UserGrowth = { month: string; total: number; active: number };
 
-export type TopStreams = { song: string; desktop: number; mobile: number };
+export type TopStreams = { song: string; artist: string; streams: number };
 
 export type RevenueDistribution = { type: string; amount: number; fill?: string };
 

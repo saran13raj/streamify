@@ -44,26 +44,26 @@ export const dashboardMetricsData: DashboardMetrics = {
 };
 
 export const userGrowthData: UserGrowth[] = [
-	{ month: 'January', desktop: 186, mobile: 80 },
-	{ month: 'February', desktop: 305, mobile: 200 },
-	{ month: 'March', desktop: 237, mobile: 120 },
-	{ month: 'April', desktop: 73, mobile: 190 },
-	{ month: 'May', desktop: 209, mobile: 130 },
-	{ month: 'June', desktop: 214, mobile: 140 },
-	{ month: 'July', desktop: 214, mobile: 140 },
-	{ month: 'August', desktop: 214, mobile: 140 },
-	{ month: 'September', desktop: 214, mobile: 140 },
-	{ month: 'October', desktop: 214, mobile: 140 },
-	{ month: 'November', desktop: 214, mobile: 140 },
-	{ month: 'December', desktop: 214, mobile: 140 }
+	{ month: 'January', total: 186, active: 80 },
+	{ month: 'February', total: 305, active: 200 },
+	{ month: 'March', total: 237, active: 120 },
+	{ month: 'April', total: 273, active: 190 },
+	{ month: 'May', total: 209, active: 130 },
+	{ month: 'June', total: 321, active: 140 },
+	{ month: 'July', total: 114, active: 89 },
+	{ month: 'August', total: 298, active: 176 },
+	{ month: 'September', total: 199, active: 113 },
+	{ month: 'October', total: 201, active: 112 },
+	{ month: 'November', total: 444, active: 378 },
+	{ month: 'December', total: 421, active: 389 }
 ];
 
 export const topStreamsData: TopStreams[] = [
-	{ song: 'January', desktop: 186, mobile: 80 },
-	{ song: 'February', desktop: 305, mobile: 200 },
-	{ song: 'March', desktop: 237, mobile: 120 },
-	{ song: 'April', desktop: 73, mobile: 190 },
-	{ song: 'May', desktop: 209, mobile: 130 }
+	{ song: 'WallFlowers', artist: 'The Chain Gang of 1974', streams: 301 },
+	{ song: 'Vampires', artist: 'The Midnight', streams: 277 },
+	{ song: 'Choo Lo', artist: 'The Local Train', streams: 212 },
+	{ song: "'85 Again", artist: 'Robert Parker', streams: 199 },
+	{ song: 'Dangerous Dreams', artist: 'LeBrock', streams: 178 }
 ];
 
 export const revenueDistributionData: RevenueDistribution[] = [

@@ -1,10 +1,9 @@
+import { useUnit } from 'effector-react';
 import React from 'react';
 
-import { dataColumns } from 'entities/dashboard/data-columns';
+import { dashboardEntityModel, dataColumns } from 'entities/dashboard';
 
 import { DataTable } from 'shared/components/data-table';
-import { useUnit } from 'effector-react';
-import { dashboardEntityModel } from 'entities/dashboard';
 
 export const RecentStreams: React.FC = () => {
 	const recentStreams = useUnit(dashboardEntityModel.$recentStreams);

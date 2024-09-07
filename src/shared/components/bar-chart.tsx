@@ -17,13 +17,9 @@ import {
 import { CustomChart } from 'shared/types';
 
 const chartConfig = {
-	desktop: {
-		label: 'Desktop',
+	streams: {
+		label: 'Streams',
 		color: 'hsl(var(--chart-1))'
-	},
-	mobile: {
-		label: 'Mobile',
-		color: 'hsl(var(--chart-2))'
 	},
 	label: {
 		color: 'hsl(var(--background))'
@@ -54,7 +50,7 @@ export const BarChartHorizontal: React.FC<CustomChart> = ({
 						}}>
 						<CartesianGrid horizontal={false} />
 						<YAxis
-							dataKey={dataKey}
+							dataKey={'artist'}
 							type='category'
 							tickLine={false}
 							tickMargin={10}
@@ -62,15 +58,15 @@ export const BarChartHorizontal: React.FC<CustomChart> = ({
 							tickFormatter={(value) => value.slice(0, 3)}
 							hide
 						/>
-						<XAxis dataKey='desktop' type='number' hide />
+						<XAxis dataKey='streams' type='number' hide />
 						<ChartTooltip
 							cursor={false}
 							content={<ChartTooltipContent indicator='line' />}
 						/>
 						<Bar
-							dataKey='desktop'
+							dataKey='streams'
 							layout='vertical'
-							fill='var(--color-desktop)'
+							fill='var(--color-streams)'
 							radius={4}>
 							<LabelList
 								dataKey={dataKey}
@@ -80,7 +76,7 @@ export const BarChartHorizontal: React.FC<CustomChart> = ({
 								fontSize={12}
 							/>
 							<LabelList
-								dataKey='desktop'
+								dataKey='streams'
 								position='right'
 								offset={8}
 								className='fill-foreground'
