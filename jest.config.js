@@ -7,6 +7,7 @@ export default {
 		'\\.(css|less|sass|scss)$': 'identity-obj-proxy',
 		'^.+\\.svg$': 'jest-transformer-svg',
 		'^src/(.*)$': '<rootDir>/src/$1',
+		'^entities/(.*)$': '<rootDir>/src/entities/$1',
 		'^shared/(.*)$': '<rootDir>/src/shared/$1'
 	},
 	setupFilesAfterEnv: ['<rootDir>/jest.setup.ts'],
@@ -17,13 +18,14 @@ export default {
 	collectCoverageFrom: [
 		'<rootDir>/src/**/*.{js,jsx,ts,tsx}',
 		// don't include in coverage
-		'!<rootDir>/src/**/shadcn/**/*.{js,jsx,ts,tsx}',
-		'!<rootDir>/src/**/theme/**/*.{js,jsx,ts,tsx}',
-		'!<rootDir>/src/**/data-table/**/*.{js,jsx,ts,tsx}',
+		'!<rootDir>/src/main.tsx',
 		'!<rootDir>/src/**/model/**/*.{js,ts}',
 		'!<rootDir>/src/**/types.{js,ts}',
 		'!<rootDir>/src/**/data.{js,ts}',
-		'!<rootDir>/src/**/lib/**/*.{js,ts}'
+		'!<rootDir>/src/**/lib/**/*.{js,ts}',
+		'!<rootDir>/src/**/shadcn/**/*.{js,jsx,ts,tsx}',
+		'!<rootDir>/src/**/theme/**/*.{js,jsx,ts,tsx}',
+		'!<rootDir>/src/**/data-table/**/*.{js,jsx,ts,tsx}'
 	]
 	// coverageReporters: ['lcov']
 };

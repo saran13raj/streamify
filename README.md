@@ -1,50 +1,69 @@
-# React + TypeScript + Vite
+# My React Project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This README provides instructions for setting up and running the project, as well as an overview of its structure and key technologies used.
 
-Currently, two official plugins are available:
+## Getting Started
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Clone the Repository
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+```bash
+git clone https://github.com/saran13raj/streamify
+cd streamify
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+### Installation and Running
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+This project uses Vite for fast development and building. Follow these steps to get started:
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+1. Install dependencies:
+
+    ```bash
+    pnpm install
+    ```
+
+2. Run the development server:
+
+    ```bash
+    pnpm dev
+    ```
+
+3. Build for production:
+
+    ```bash
+    pnpm build
+    ```
+
+4. Run unit tests:
+    ```bash
+    pnpm test
+    ```
+
+## Project Structure
+
+This project follows the Feature Sliced Design architecture, which organizes code into layers and slices for better maintainability and scalability. Learn more about Feature Sliced Design [here](https://feature-sliced.design/docs/get-started/overview).
+
+## State Management
+
+State management is handled by Effector.js, a powerful and lightweight state manager. Effector provides a clear and predictable way to manage application state. For more information, check out the [Effector React API documentation](https://effector.dev/en/api/effector-react/).
+
+## UI Components and Styling
+
+The project uses Tailwind CSS for utility-first styling and leverages the shadcn/ui component library for beautiful, accessible UI components. Explore the available components at [ui.shadcn.com](https://ui.shadcn.com/).
+
+## Testing
+
+Unit tests are written using Jest, a JavaScript Testing Framework with a focus on simplicity.
+
+Uncomment `coverageReporters` in `jest.config.ts` file to generate coverage report for tests.
+
+## Additional Information
+
+Could have mocked API calls for metrics and charts similar to recent streams API call. Then planned to not do it at this time and hardcoded it to the effector store.
+
+It's best to sort Tailwind classes using [Tailwind prettier](https://tailwindcss.com/blog/automatic-class-sorting-with-prettier). So it's easy find the exact class while debugging if you understand by what order Tailwind orders in CSS.
+
+> All the songs listed are from few of my favorite artists. Most streamed chart lists my top 5 favorite songs at this time.
+
+Demo - https://streamify-9g1.pages.dev
+
+-- built by saran13raj.com
