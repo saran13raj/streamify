@@ -1,0 +1,202 @@
+[
+	{
+		"userID": "a1b2c",
+		"name": "Synthetic",
+		"artist": "The Midnight",
+		"dateStreamed": "2023-08-15T14:23:10Z",
+		"streamCount": "156",
+		"topRevenueSource": "SUBSCRIPTION"
+	},
+	{
+		"userID": "d3e4f",
+		"name": "Stick Season",
+		"artist": "Noah Kahan",
+		"dateStreamed": "2024-01-22T09:45:30Z",
+		"streamCount": "231",
+		"topRevenueSource": "AD"
+	},
+	{
+		"userID": "g5h6i",
+		"name": "Firebird",
+		"artist": "VHS Collection",
+		"dateStreamed": "2023-11-03T18:12:05Z",
+		"streamCount": "87",
+		"topRevenueSource": "REFERRAL"
+	},
+	{
+		"userID": "j7k8l",
+		"name": "On the Run",
+		"artist": "Timecop1983",
+		"dateStreamed": "2024-03-07T21:34:18Z",
+		"streamCount": "178",
+		"topRevenueSource": "SUBSCRIPTION"
+	},
+	{
+		"userID": "m9n0p",
+		"name": "Endless Summer",
+		"artist": "The Midnight",
+		"dateStreamed": "2023-06-30T12:56:40Z",
+		"streamCount": "299",
+		"topRevenueSource": "AD"
+	},
+	{
+		"userID": "q1r2s",
+		"name": "Dreamcatcher",
+		"artist": "FM-84",
+		"dateStreamed": "2024-02-14T16:28:55Z",
+		"streamCount": "134",
+		"topRevenueSource": "REFERRAL"
+	},
+	{
+		"userID": "t3u4v",
+		"name": "Khoj (Passing By)",
+		"artist": "When Chai Met Toast",
+		"dateStreamed": "2023-09-19T10:05:22Z",
+		"streamCount": "201",
+		"topRevenueSource": "SUBSCRIPTION"
+	},
+	{
+		"userID": "w5x6y",
+		"name": "Sleepwalking",
+		"artist": "The Chain Gang of 1974",
+		"dateStreamed": "2024-04-01T08:17:33Z",
+		"streamCount": "89",
+		"topRevenueSource": "AD"
+	},
+	{
+		"userID": "z7a8b",
+		"name": "Runaway",
+		"artist": "FM-84",
+		"dateStreamed": "2023-12-11T19:39:50Z",
+		"streamCount": "267",
+		"topRevenueSource": "REFERRAL"
+	},
+	{
+		"userID": "c9d0e",
+		"name": "Victoria",
+		"artist": "LeBrock",
+		"dateStreamed": "2024-01-05T11:51:07Z",
+		"streamCount": "145",
+		"topRevenueSource": "SUBSCRIPTION"
+	},
+	{
+		"userID": "f1g2h",
+		"name": "Northern Soul",
+		"artist": "Noah Kahan",
+		"dateStreamed": "2023-07-28T15:03:25Z",
+		"streamCount": "189",
+		"topRevenueSource": "AD"
+	},
+	{
+		"userID": "i3j4k",
+		"name": "Neon Ocean",
+		"artist": "When Chai Met Toast",
+		"dateStreamed": "2024-03-18T22:14:42Z",
+		"streamCount": "102",
+		"topRevenueSource": "REFERRAL"
+	},
+	{
+		"userID": "l5m6n",
+		"name": "Comeback Kid",
+		"artist": "The Midnight",
+		"dateStreamed": "2023-10-09T13:27:59Z",
+		"streamCount": "278",
+		"topRevenueSource": "SUBSCRIPTION"
+	},
+	{
+		"userID": "o7p8q",
+		"name": "Sunset",
+		"artist": "The Midnight",
+		"dateStreamed": "2024-02-29T17:40:16Z",
+		"streamCount": "211",
+		"topRevenueSource": "AD"
+	},
+	{
+		"userID": "r9s0t",
+		"name": "Dial Up",
+		"artist": "LeBrock",
+		"dateStreamed": "2023-08-03T20:52:33Z",
+		"streamCount": "167",
+		"topRevenueSource": "REFERRAL"
+	},
+	{
+		"userID": "u1v2w",
+		"name": "Atlas",
+		"artist": "FM-84",
+		"dateStreamed": "2024-01-17T09:04:50Z",
+		"streamCount": "234",
+		"topRevenueSource": "SUBSCRIPTION"
+	},
+	{
+		"userID": "x3y4z",
+		"name": "Joy",
+		"artist": "When Chai Met Toast",
+		"dateStreamed": "2023-11-25T12:16:07Z",
+		"streamCount": "198",
+		"topRevenueSource": "AD"
+	},
+	{
+		"userID": "a5b6c",
+		"name": "Waves",
+		"artist": "VHS Collection",
+		"dateStreamed": "2024-04-10T14:28:24Z",
+		"streamCount": "123",
+		"topRevenueSource": "REFERRAL"
+	},
+	{
+		"userID": "d7e8f",
+		"name": "Gloria",
+		"artist": "The Midnight",
+		"dateStreamed": "2023-09-07T16:40:41Z",
+		"streamCount": "256",
+		"topRevenueSource": "SUBSCRIPTION"
+	},
+	{
+		"userID": "g9h0i",
+		"name": "Tonight",
+		"artist": "FM-84",
+		"dateStreamed": "2024-03-23T18:52:58Z",
+		"streamCount": "189",
+		"topRevenueSource": "AD"
+	},
+	{
+		"userID": "j1k2l",
+		"name": "Hurt",
+		"artist": "Noah Kahan",
+		"dateStreamed": "2023-12-19T21:05:15Z",
+		"streamCount": "277",
+		"topRevenueSource": "REFERRAL"
+	},
+	{
+		"userID": "m3n4o",
+		"name": "Shadows",
+		"artist": "The Midnight",
+		"dateStreamed": "2024-02-05T23:17:32Z",
+		"streamCount": "145",
+		"topRevenueSource": "SUBSCRIPTION"
+	},
+	{
+		"userID": "p5q6r",
+		"name": "Memories",
+		"artist": "Timecop1983",
+		"dateStreamed": "2023-10-31T10:29:49Z",
+		"streamCount": "213",
+		"topRevenueSource": "AD"
+	},
+	{
+		"userID": "s7t8u",
+		"name": "Wayward",
+		"artist": "When Chai Met Toast",
+		"dateStreamed": "2024-01-13T12:42:06Z",
+		"streamCount": "178",
+		"topRevenueSource": "REFERRAL"
+	},
+	{
+		"userID": "v9w0x",
+		"name": "Los Angeles",
+		"artist": "The Midnight",
+		"dateStreamed": "2023-07-09T14:54:23Z",
+		"streamCount": "289",
+		"topRevenueSource": "SUBSCRIPTION"
+	}
+]
