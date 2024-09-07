@@ -18,7 +18,7 @@ export function DataTableToolbar<TData>({ table, facetSelected }: DataTableToolb
 
 	return (
 		<div className='flex items-center justify-between'>
-			<div className='flex flex-1 items-center space-x-2'>
+			<div className='flex flex-1 space-x-2'>
 				<Input
 					placeholder='Filter Songs...'
 					value={(table.getColumn('global')?.getFilterValue() as string) ?? ''}
@@ -39,7 +39,7 @@ export function DataTableToolbar<TData>({ table, facetSelected }: DataTableToolb
 					<Button
 						variant='ghost'
 						onClick={() => table.resetColumnFilters()}
-						className='h-8 px-2 lg:px-3'>
+						className='h-8 px-2 lg:px-3 hidden md:flex lg:flex'>
 						Reset
 						<Cross2Icon className='ml-2 h-4 w-4' />
 					</Button>

@@ -115,6 +115,10 @@ export const dataColumns: ColumnDef<RecentStream>[] = [
 					<span>{topRevenueSource.label}</span>
 				</div>
 			);
+		},
+		// custom filter needed for multi facet selection
+		filterFn: (row, id, value) => {
+			return value.includes(row.getValue(id));
 		}
 	},
 	{
@@ -122,7 +126,8 @@ export const dataColumns: ColumnDef<RecentStream>[] = [
 		cell: ({ row }) => <DataTableRowActions row={row} />
 	},
 	{
-		id: 'global', // for multi col filter
+		// for multi col filter
+		id: 'global',
 		filterFn: (row, _, value) => {
 			const searchTerm = value.toLowerCase();
 
