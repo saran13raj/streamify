@@ -10,7 +10,7 @@ import React from 'react';
 
 import { dashboardEntityModel } from 'entities/dashboard';
 
-import { BarChartHorizontal } from 'shared/components/bar-chart';
+import { BarChartHorizontal } from 'shared/components/bar-chart-horizontal';
 import { LineChartCustom } from 'shared/components/line-chart';
 import { MetricsCard } from 'shared/components/metrics-card';
 import { PieChartCustom } from 'shared/components/pie-chart';

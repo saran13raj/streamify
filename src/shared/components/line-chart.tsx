@@ -57,7 +57,7 @@ export const LineChartCustom: React.FC<CustomChart> = ({
 							tickMargin={8}
 							tickFormatter={(value) => value.slice(0, 3)}
 						/>
-						<ChartTooltip cursor={false} content={<ChartTooltipContent />} />
+						<ChartTooltip cursor={true} content={<ChartTooltipContent />} />
 						<Line
 							dataKey='total'
 							type='monotone'

@@ -22,7 +22,11 @@
 		"strict": true,
 
 		/* shadcn tailwind */
-		"baseUrl": "src"
+		"baseUrl": "src",
+
+		"types": ["jest", "vite/client"],
+
+		"esModuleInterop": true
 	},
 	"exclude": ["node_modules", "dist", "supabase"]
 }
