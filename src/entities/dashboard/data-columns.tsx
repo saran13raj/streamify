@@ -109,6 +109,10 @@ export const dataColumns: ColumnDef<RecentStream>[] = [
 					return parseInt(row.getValue(columnId)) <= filterValue;
 				case '!=':
 					return parseInt(row.getValue(columnId)) !== filterValue;
+				case 'includes':
+					return `${row.getValue(columnId)}`.includes(`${filterValue}`);
+				case 'excludes':
+					return `!${row.getValue(columnId)}`.includes(`${filterValue}`);
 				default:
 					return false;
 			}
