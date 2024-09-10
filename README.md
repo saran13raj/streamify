@@ -64,6 +64,8 @@ Could have mocked API calls for metrics and charts similar to recent streams API
 
 It's best to sort Tailwind classes using [Tailwind prettier](https://tailwindcss.com/blog/automatic-class-sorting-with-prettier). So it's easy find the exact class while debugging if you understand by what order Tailwind orders in CSS.
 
+Should add more units and integration tests for full coverage.
+
 > All the songs listed are from few of my favorite artists. Most streamed chart lists my top 5 favorite songs at this time.
 
 Demo - https://streamify-9g1.pages.dev

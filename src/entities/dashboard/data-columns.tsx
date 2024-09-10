@@ -43,7 +43,9 @@ export const dataColumns: ColumnDef<RecentStream>[] = [
 	},
 	{
 		accessorKey: 'name',
-		header: ({ column }) => <DataTableColumnHeader column={column} title='Name' />,
+		header: ({ column }) => {
+			return <DataTableColumnHeader column={column} title='Name' />;
+		},
 		cell: ({ row }) => {
 			return (
 				<div className='flex space-x-2'>
@@ -65,6 +67,18 @@ export const dataColumns: ColumnDef<RecentStream>[] = [
 					</span>
 				</div>
 			);
+		},
+		filterFn: (row, columnId, value) => {
+			const { condition, value: filterValue } = value as { condition: string; value: string };
+			const rowValue = row?.getValue(columnId) as string;
+			switch (condition) {
+				case 'includes':
+					return rowValue.toString().includes(filterValue);
+				case 'excludes':
+					return !rowValue.toString().includes(filterValue);
+				default:
+					return false;
+			}
 		}
 	},
 	{
@@ -78,6 +92,26 @@ export const dataColumns: ColumnDef<RecentStream>[] = [
 					</span>
 				</div>
 			);
+		},
+		filterFn: (row, columnId, value) => {
+			// TODO move to util
+			const { condition, value: filterValue } = value as { condition: string; value: number };
+			switch (condition) {
+				case '>':
+					return parseInt(row.getValue(columnId)) > filterValue;
+				case '<':
+					return parseInt(row.getValue(columnId)) < filterValue;
+				case '=':
+					return parseInt(row.getValue(columnId)) === filterValue;
+				case '>=':
+					return parseInt(row.getValue(columnId)) >= filterValue;
+				case '<=':
+					return parseInt(row.getValue(columnId)) <= filterValue;
+				case '!=':
+					return parseInt(row.getValue(columnId)) !== filterValue;
+				default:
+					return false;
+			}
 		}
 	},
 	{

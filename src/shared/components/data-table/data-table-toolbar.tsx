@@ -7,6 +7,7 @@ import { Input } from 'shared/components/shadcn/ui/input';
 import { DataTableFacetedFilter } from './data-table-faceted-filter';
 import { DataTableViewOptions } from './data-table-view-options';
 import { topRevenueSources } from 'entities/dashboard/data';
+import { DataTableConditionalFilter } from './data-table-conditional-filter';
 
 type DataTableToolbarProps<TData> = {
 	table: Table<TData>;
@@ -15,6 +16,12 @@ type DataTableToolbarProps<TData> = {
 
 export function DataTableToolbar<TData>({ table, facetSelected }: DataTableToolbarProps<TData>) {
 	const isFiltered = table.getState().columnFilters.length > 0;
+
+	const shouldFilter = ['streamCount', 'artist'];
+
+	const filterColumns = table
+		.getAllColumns()
+		.filter((col) => shouldFilter.find((fil) => fil === col.id));
 
 	return (
 		<div className='flex items-center justify-between'>
@@ -34,6 +41,9 @@ export function DataTableToolbar<TData>({ table, facetSelected }: DataTableToolb
 						options={topRevenueSources}
 						selected={facetSelected}
 					/>
+				)}
+				{filterColumns.length && (
+					<DataTableConditionalFilter columns={filterColumns} table={table} />
 				)}
 				{isFiltered && (
 					<Button
